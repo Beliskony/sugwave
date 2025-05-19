@@ -35,7 +35,8 @@ const Header = () => {
   return (
     <section className="bg-transparent w-full h-28 flex flex-row item-center justify-around px-4 max-sm:px-1 max-sm:justify-between">
       <div className="flex flex-row items-center p-2">
-        <img src="/images/LogoNoBG.png" alt="Logo"className="w-28 h-28" />
+        <Link to="/">
+        <img src="/images/LogoNoBG.png" alt="Logo"className="w-28 h-28" /></Link>
       </div>
 
       <nav className="flex flex-row text-2xl items-center max-sm:hidden">

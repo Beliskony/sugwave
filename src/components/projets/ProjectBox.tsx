@@ -9,7 +9,7 @@ type ProjectBoxProps = {
 const ProjectBox: FC<ProjectBoxProps> = ({ title, description, imageUrl }) => (
     <div
         className="relative group cursor-pointer rounded-lg overflow-hidden border border-gray-200 transition-colors duration-300
-        h-[400px] w-[300px]"
+        h-[400px] w-[300px] max-sm:h-[250px] max-sm:w-[200px] max-sm:rounded-md"
         style={{ minHeight: 180 }}
     >
         {/* Background image */}

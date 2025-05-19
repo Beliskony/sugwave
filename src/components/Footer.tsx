@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="flex flex-row w-full items-center justify-center my-2 max-sm:flex-col">
         <div className="w-1/2 flex flex-row items-center justify-start gap-x-10 max-sm:gap-x-3 max-sm:w-full max-sm:justify-center">
           <Link to="/service" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Services</Link>
-          <Link to="/projet" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Projets</Link>
+          <Link to="/project" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Projects</Link>
           <Link to="/" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Home</Link>
           
         
