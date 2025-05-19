@@ -12,8 +12,8 @@ function Service() {
                 <Header />
             </div>
 
-            <div className="flex w-full items-center justify-center mb-52">
-                <h1 className="text-8xl text-white font-bold">Decouvez Nos Services</h1>
+            <div className="flex w-full items-center justify-center mb-52 max-sm:mb-10">
+                <h1 className="text-8xl text-white font-bold max-sm:text-5xl">Decouvez Nos Services</h1>
             </div>
         </div>
 
@@ -63,21 +63,21 @@ function Service() {
     </div>
 
     {/*partie Chiffres Clés*/}
-    <div className="relative flex flex-row min-h-56 w-full items-center justify-around bg-[url('/images/bgSlim.jpg')] bg-center bg-cover gap-x-10 px-20 max-sm:px-1">
+    <div className="relative flex flex-row min-h-48 w-full items-center justify-around bg-[url('/images/bgSlim.jpg')] bg-center bg-cover gap-x-10 px-20 max-sm:px-1">
       <div className="absolute flex flex-row inset-0 bg-black opacity-50"></div>
         <div className="flex flex-col items-center justify-center z-50">
-            <h1 className="text-8xl text-white font-bold">100+</h1>
-            <p className="text-2xl text-white font-bold">Projets Realisés</p>
+            <h1 className="text-8xl text-white font-bold max-sm:text-4xl">100+</h1>
+            <p className="text-2xl text-white font-bold max-sm:text-xs">Projets Realisés</p>
         </div>
 
         <div className="flex flex-col items-center justify-center z-50">
-            <h1 className="text-8xl text-white font-bold">50+</h1>
-            <p className="text-2xl text-white font-bold">Clients Satisfaits</p>
+            <h1 className="text-8xl text-white font-bold max-sm:text-4xl">50+</h1>
+            <p className="text-2xl text-white font-bold max-sm:text-xs">Clients Satisfaits</p>
         </div>
 
         <div className="flex flex-col items-center justify-center z-50">
-            <h1 className="text-8xl text-white font-bold">10+</h1>
-            <p className="text-2xl text-white font-bold">Années d'Experience</p>
+            <h1 className="text-8xl text-white font-bold max-sm:text-4xl">10+</h1>
+            <p className="text-2xl text-white font-bold max-sm:text-xs">Années d'Experience</p>
         </div>
       
     </div>

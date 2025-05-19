@@ -33,10 +33,10 @@ const Header = () => {
  
   
   return (
-    <section className="bg-transparent w-full h-28 flex flex-row item-center justify-around px-4 max-sm:px-1 max-sm:justify-between">
-      <div className="flex flex-row items-center p-2">
+    <section className="bg-transparent w-full h-28 flex flex-row item-center justify-around px-4 max-sm:px-1 max-sm:justify-around">
+      <div className="flex flex-row items-center p-2 max-sm:p-0">
         <Link to="/">
-        <img src="/images/LogoNoBG.png" alt="Logo"className="w-28 h-28" /></Link>
+        <img src="/images/LogoNoBG.png" alt="Logo" className="w-28 h-28 max-sm:w-20 max-sm:h-20" /></Link>
       </div>
 
       <nav className="flex flex-row text-2xl items-center max-sm:hidden">
@@ -102,10 +102,10 @@ const Header = () => {
             <img src="https://img.icons8.com/?size=100&id=8113&format=png&color=FFFFFF" alt="Menu" className="w-10 h-10" />
           </button>
             { isOpen && (
-            <nav className="absolute w-screen justify-center top-24 right-0 flex flex-col gap-x-2 gap-y-5 my-2 items-center bg-white">
-              <a href="#" className="text-black text-2xl font-bold text-center px-4 border-b py-3 w-full hover:bg-black hover:text-white hover:scale-105 transition-all">Home</a>
-              <a href="#" className="text-black text-2xl font-bold text-center px-4 border-b py-3 w-full hover:bg-black hover:text-white hover:scale-105 transition-all">Project</a>
-              <a href="#" className="text-black text-2xl font-bold text-center px-4 border-b py-3 w-full hover:bg-black hover:text-white hover:scale-105 transition-all">Contact</a>
+            <nav className="absolute h-screen w-screen justify-center top-24 right-[-20px] flex flex-col gap-y-5 my-2 items-center bg-white z-50">
+              <Link to="/" className="text-black text-2xl font-bold text-center px-4 border-b py-3 w-full hover:bg-black hover:text-white hover:scale-105 transition-all">Home</Link>
+              <Link to="/project" className="text-black text-2xl font-bold text-center px-4 border-b py-3 w-full hover:bg-black hover:text-white hover:scale-105 transition-all">Projects</Link>
+              <Link to="/service" className="text-black text-2xl font-bold text-center px-4 border-b py-3 w-full hover:bg-black hover:text-white hover:scale-105 transition-all">Services</Link>
             </nav>
           )}
 

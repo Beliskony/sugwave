@@ -9,12 +9,12 @@ type ProjectBoxProps = {
 const ProjectBox: FC<ProjectBoxProps> = ({ title, description, imageUrl }) => (
     <div
         className="relative group cursor-pointer rounded-lg overflow-hidden border border-gray-200 transition-colors duration-300
-        h-[400px] w-[300px] max-sm:h-[250px] max-sm:w-[200px] max-sm:rounded-md"
+        h-[400px] w-[300px] max-sm:h-[300px] max-sm:w-[190px] max-sm:rounded-md max-sm:items-center max-sm:justify-center"
         style={{ minHeight: 180 }}
     >
         {/* Background image */}
         <div
-            className="absolute inset-0 bg-center bg-cover transition-opacity duration-300"
+            className="absolute inset-0 bg-center flex flex-col bg-cover transition-opacity duration-300"
             style={{ backgroundImage: `url(${imageUrl})` }}
         />
         {/* Black overlay on hover */}

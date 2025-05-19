@@ -41,7 +41,7 @@ function Home() {
   return (
     <section className="flex flex-col items-center justify-between h-full w-full">
     {/*partie Une*/}
-        <div className="flex flex-col items-center justify-between w-full h-[730px] bg-[url('/images/bgDark.jpg')] bg-cover bg-center">
+        <div className="flex flex-col items-center justify-between w-full h-[730px] max-sm:h-[550px] bg-[url('/images/bgDark.jpg')] bg-cover bg-center">
            <div className="w-full">
              <Header />
            </div>
@@ -99,7 +99,7 @@ function Home() {
                            details="Notre savoir faire est notre force, nous vous offrons le meilleur en plus d'un personnel qualifié"
                            />
 
-                <SpecialBox titre="Personnalisation"
+                <SpecialBox titre="Personnaliser"
                            icones= "https://img.icons8.com/?size=100&id=2i2jDnoEm4ER&format=png&color=000000"
                            details="Chez nous, vous pouvez personnaliser votre projet selon vos gouts et vos envies"
                            />
@@ -145,7 +145,7 @@ function Home() {
     <div className="flex flex-col px-20 my-5 w-full items-center justify-end max-sm:px-1">
         <h1 className="text-end text-7xl font-bold max-sm:text-3xl">NOS PROJETS</h1>
 
-        <div className="flex flex-row items-center justify-between w-full my-5 max-sm:flex-col max-sm:gap-y-5">
+        <div className="flex flex-row items-center justify-between w-full my-5 max-sm:grid max-sm:grid-cols-2 max-sm:gap-y-5 max-sm:gap-x-1">
             <ProjectBox title="Renovation d'une chambre"
                         description="Votre chambre est votre sanctuaire. Nous vous offrons le meilleur en matière de rénovation."
                         imageUrl="/images/projet.jpg" />
@@ -197,7 +197,7 @@ function Home() {
         </div>
 
 
-        <div className="flex flex-col items-start justify-start w-2/3 px-20 gap-y-2 max-sm:w-full">
+        <div className="flex flex-col items-start justify-start w-2/3 px-20 gap-y-2 max-sm:w-full max-sm:px-1">
             <h5 className="text-xs font-medium">19 Mai 2025</h5>
             <p className="text-sm">La méthode du béton par palier, aussi appelée mise en œuvre par couches ou par étapes, est une technique utilisée principalement pour le bétonnage 
                 des grandes structures (fondations profondes, barrages, dalles épaisses, etc.). Elle consiste à couler le béton en plusieurs couches ou paliers successifs, plutôt qu’en
@@ -250,7 +250,7 @@ function Home() {
 
 
     {/*Partie six*/}
-    <div id="Contacts" className="flex flex-row bg-[url('/images/coverCinq.jpg')] bg-cover bg-center w-full h-[550px] p-20 max-sm:flex-col max-sm:p-1">
+    <div id="Contacts" className="flex flex-row bg-[url('/images/coverCinq.jpg')] bg-cover bg-center w-full h-[550px] p-20 max-sm:flex-col max-sm:p-1 max-sm:items-center max-sm:justify-center">
        <div className="flex items-start justify-start w-1/2 max-sm:w-full">
              <h1 className="text-7xl font-black text-white text-wrap max-sm:text-center">EXPRIMEZ VOUS</h1>
        </div>
