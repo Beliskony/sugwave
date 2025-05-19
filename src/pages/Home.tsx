@@ -55,7 +55,7 @@ function Home() {
                     </p>
 
                     <div className="flex text-white">
-                        <a href="#" className="flex flex-row items-center gap-x-1 hover:scale-75">Explorer
+                        <a href="#InformationHome" className="flex flex-row items-center gap-x-1 hover:scale-75">Explorer
                             <img src="https://img.icons8.com/?size=100&id=164&format=png&color=ffffff" alt="Arrow" className="w-10 h-10 max-sm:w-5 max-sm:h-5 " />
                         </a>
                     </div>
@@ -75,9 +75,9 @@ function Home() {
     </div>
     {/*partie Deux*/}
     
-    <div className="px-20 my-2 w-full flex flex-col items-start justify-center gap-y-5 max-sm:px-1 max-sm:my-10 max-sm:gap-y-1">
+    <div id="InformationHome" className="px-20 my-2 w-full flex flex-col items-start justify-center gap-y-5 max-sm:px-1 max-sm:my-10 max-sm:gap-y-1">
         <p className="text-4xl text-start font-black text-black max-sm:text-2xl text-wrap w-3/7 max-sm:w-full">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elitions.
+            Promouvoir l'innovation dans le secteur de la construction.
         </p>
 
         <div className="flex flex-row items-center justify-between my-5 w-full gap-x-5 max-sm:flex-col max-sm:gap-y-5">
@@ -119,13 +119,11 @@ function Home() {
     <div className=" my-2 w-full flex flex-col items-start justify-center gap-y-5 max-sm:px-1 max-sm:my-10">
         <div className="flex flex-row items-center justify-between px-20 max-sm:px-1 max-sm:flex-col max-sm:gap-y-3">
             <p className="text-4xl text-start font-black text-black max-sm:text-2xl text-wrap w-3/7 max-sm:w-full">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elitions.
+                Embelir votre espace de vie avec nos designs modernes.
             </p>
 
             <p className="text-xl text-start font-light text-black max-sm:text-xs text-wrap w-3/7 max-sm:w-full">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.
+                Certe nous privilégions la qualité, mais nous ne négligeons pas le design. Nous vous offrons le meilleur en matière de design et de qualité.
             </p>
         </div>
 
@@ -149,46 +147,34 @@ function Home() {
 
         <div className="flex flex-row items-center justify-between w-full my-5 max-sm:flex-col max-sm:gap-y-5">
             <ProjectBox title="Renovation d'une chambre"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        description="Votre chambre est votre sanctuaire. Nous vous offrons le meilleur en matière de rénovation."
                         imageUrl="/images/projet.jpg" />
             
             <ProjectBox title="Appartement moderne"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        description="Concevoir un appartement moderne est notre spécialité. Nous vous offrons le meilleur en matière de design."
                         imageUrl="/images/projet1.jpg" />
 
             <ProjectBox title="Piscine privee"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        description="Un espace de vie est incomplet sans une piscine. Nous vous offrons le meilleur en matière de design et de qualité."
                         imageUrl="/images/projet2.jpg" />
             
             <ProjectBox title="Realisation de marches"
-                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        description="Faciliter l'acces a votre maison est notre priorité. Nous vous offrons le meilleur en matière de design et de qualité."
                         imageUrl="/images/projet3.jpg" />
 
         </div>
 
         <div className="flex flex-row items-center justify-between w-full my-5 max-sm:flex-col max-sm:gap-y-5">
              <p className="text-xl text-start font-light text-black max-sm:text-xs text-wrap w-full">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. <ToggleText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat." />
+                Avec SugWave, construire votre maison devient une expérience unique.
+                Au-delà de notre rôle de constructeur, nous sommes également votre conseiller, car construire une maison représente, 
+                pour la majorité, l’investissement d’une vie. C’est pourquoi nous veillons à ce que chaque projet soit durable, 
+                réfléchi et à la hauteur de vos attentes.. <ToggleText text="
+                 Nous vous accompagnons à chaque étape : de la conception des plans jusqu’à la remise des clés.
+                 Avec SugWave, vous bénéficiez d’un suivi personnalisé, de conseils avisés et de matériaux de qualité pour bâtir un foyer solide, esthétique et pérenne.
+
+                 Notre objectif ?
+                 Faire de votre projet une réussite, en alliant votre vision à notre expertise." />
              </p>
         </div>
 
@@ -264,20 +250,20 @@ function Home() {
 
 
     {/*Partie six*/}
-    <div className="flex flex-row bg-[url('/images/coverCinq.jpg')] bg-cover bg-center w-full h-[550px] p-20 max-sm:flex-col max-sm:p-1">
+    <div id="Contacts" className="flex flex-row bg-[url('/images/coverCinq.jpg')] bg-cover bg-center w-full h-[550px] p-20 max-sm:flex-col max-sm:p-1">
        <div className="flex items-start justify-start w-1/2 max-sm:w-full">
              <h1 className="text-7xl font-black text-white text-wrap max-sm:text-center">EXPRIMEZ VOUS</h1>
        </div>
 
        <div className="flex flex-col items-center justify-center w-1/2 gap-y-3 max-sm:w-full max-sm:my-10">
             <h4 className="text-2xl font-medium text-wrap text-white w-3/4 text-start">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Vous souhaitez en savoir plus sur nos services ?
             </h4>
 
             <p className="text-xs font-light text-wrap text-white w-3/4 text-start">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et 
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat.
+                Nous sommes là pour vous aider à chaque étape de votre projet. Que vous ayez des questions sur nos services, 
+                nos tarifs ou que vous souhaitiez discuter de votre projet en détail,
+                n'hésitez pas à nous contacter. Nous sommes impatients de vous accompagner dans la réalisation de votre rêve.
             </p>
 
             <div className="flex flex-row items-center">

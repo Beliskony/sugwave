@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -17,10 +17,9 @@ const Footer = () => {
 
       <div className="flex flex-row w-full items-center justify-center my-2 max-sm:flex-col">
         <div className="w-1/2 flex flex-row items-center justify-start gap-x-10 max-sm:gap-x-3 max-sm:w-full max-sm:justify-center">
-          <a href="#" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">About Us</a>
-          <a href="#" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Services</a>
-          <a href="#" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Contact</a>
-          <a href="#" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Home</a>
+          <Link to="/service" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Services</Link>
+          <Link to="/projet" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Projets</Link>
+          <Link to="/" className="text-xl text-black font-normal hover:font-bold hover:transition-all hover:ease-in-out hover:underline">Home</Link>
           
         
         </div>
@@ -36,13 +35,13 @@ const Footer = () => {
           <div className="flex flex-col items-start justify-center gap-y-2">
             <h1 className="text-xl text-gray-500">Contacts</h1>
               <a href="tel:+2250788557370" className="text-xs text-black font-bold">+225 07-88-55-73-70</a>
-              <a href="mail:nguessanaxel21@gmail.com" className="text-xs text-black font-bold">contact@info.com</a>
+              <a href="mailto:nguessanaxel21@gmail.com" className="text-xs text-black font-bold">contact@info.com</a>
           </div>
 
           <div className="flex flex-col items-start justify-center gap-y-2">
             <h1 className="text-xl text-gray-500">Adresse</h1>
-              <a href="#" className="text-xs text-black font-bold">Abidjan, Koumassi</a>
-              <a href="#" className="text-xs text-black font-bold">Rue H732</a>
+              <a href="https://maps.app.goo.gl/1BUDiFMkHiqH4jDu9" target="_blank" rel="noopener noreferrer" className="text-xs text-black font-bold">Abidjan, Koumassi</a>
+              <a href="https://maps.app.goo.gl/DnPLtnWqqUuEG9Kf8" target="_blank" rel="noopener noreferrer" className="text-xs text-black font-bold">Rue H732</a>
           </div>
         
         </div>

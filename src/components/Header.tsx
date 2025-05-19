@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 const Header = () => {
@@ -38,9 +39,9 @@ const Header = () => {
       </div>
 
       <nav className="flex flex-row text-2xl items-center max-sm:hidden">
-        <a href="#" className="text-white mx-4 hover:font-bold hover:scale-110 transition-all">Home</a>
-        <a href="#" className="text-white mx-4 hover:font-bold hover:scale-110 transition-all">Project</a>
-        <a href="#" className="text-white mx-4 hover:font-bold hover:scale-110 transition-all">Contact</a>
+        <Link to="/" className="text-white mx-4 hover:font-bold hover:scale-110 transition-all">Home</Link>
+        <Link to="/project" className="text-white mx-4 hover:font-bold hover:scale-110 transition-all">Projects</Link>
+        <Link to="/service" className="text-white mx-4 hover:font-bold hover:scale-110 transition-all">Services</Link>
       </nav>
 
     
