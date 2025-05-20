@@ -47,7 +47,7 @@ function Home() {
            </div>
 
            <div className="flex flex-col items-start justify-start w-full px-20 my-5 gap-y-3 max-sm:px-1 max-sm:my-10">
-              <h1 className="text-8xl font-black text-white max-sm:text-3xl">CONSTRUISEZ --- INOVONS</h1>
+              <h1 className="text-8xl font-black text-white max-sm:text-3xl">CONSTRUISEZ --- INNOVONS</h1>
 
               <div className="flex flex-row items-center justify-between w-full">
                     <p className="text-xl font-normal text-wrap text-white w-[450px] text-start max-sm:text-xs max-sm:w-[250px]">
