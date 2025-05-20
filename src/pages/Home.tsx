@@ -292,12 +292,12 @@ function Home() {
 
             <label className="text-black w-full">
               Email:
-              <input type="email" className="block focus-visible:ring-0 focus-visible:border-0 border rounded px-2 py-1 mt-1 w-full" value={formData.email} onChange={handleChange} required/>
+              <input id="email" name="email" type="email" className="block focus-visible:ring-0 focus-visible:border-0 border rounded px-2 py-1 mt-1 w-full" value={formData.email} onChange={handleChange} required/>
             </label>
 
             <label className="text-black w-full">
               Message:
-              <textarea className="block border rounded w-full px-2 py-1 mt-1" placeholder="votre message" value={formData.message} onChange={handleChange} required/>
+              <textarea id="message" name="message" className="block border rounded w-full px-2 py-1 mt-1" placeholder="votre message" value={formData.message} onChange={handleChange} required/>
               </label>
             <button type="submit" className="bg-black w-full text-white p-2 rounded">
               Envoyer
