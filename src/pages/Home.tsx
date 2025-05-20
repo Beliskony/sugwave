@@ -255,7 +255,7 @@ function Home() {
              <h1 className="text-7xl font-black text-white text-wrap max-sm:text-center">EXPRIMEZ VOUS</h1>
        </div>
 
-       <div className="flex flex-col items-center justify-center w-1/2 gap-y-3 max-sm:w-full max-sm:my-10">
+       <div className="flex flex-col items-center justify-center w-1/2 gap-y-5 max-sm:w-full max-sm:my-10">
             <h4 className="text-2xl font-medium text-wrap text-white w-3/4 text-start">
                 Vous souhaitez en savoir plus sur nos services ?
             </h4>

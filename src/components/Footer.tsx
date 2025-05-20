@@ -34,7 +34,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-start justify-center gap-y-2">
             <h1 className="text-xl text-gray-500">Contacts</h1>
-              <a href="tel:+2250788557370" className="text-xs text-black font-bold">+225 07-88-55-73-70</a>
+              <a href="tel:+2250788557370" className="text-xs text-black font-bold">07-88-55-73-70</a>
               <a href="mailto:nguessanaxel21@gmail.com" className="text-xs text-black font-bold">contact@info.com</a>
           </div>
 
