@@ -1,5 +1,4 @@
-import Footer from "../components/Footer"
-import Header from "../components/Header"
+import { X } from "lucide-react"
 import Separateur from "../components/homeScreen/Separateur"
 import SliderHome from "../components/homeScreen/SliderHome"
 import SpecialBox from "../components/homeScreen/SpecialBox"
@@ -16,8 +15,8 @@ function Home() {
     setIsClicked(!isClicked);
   };
    const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    Name: "",
+    contact: "",
     email: "",
     message: "",
   })
@@ -33,20 +32,17 @@ function Home() {
     e.preventDefault();
   console.log("Form submitted:", formData);
 
-    setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    setFormData({ Name: "", contact: "", email: "", message: "" });
     setIsClicked(false);
   }
 
 
   return (
-    <section className="flex flex-col items-center justify-between h-full w-full">
+    <section className="flex flex-col items-center h-full w-full">
     {/*partie Une*/}
-        <div className="flex flex-col items-center justify-between w-full h-[730px] max-sm:h-[550px] bg-[url('/images/bgDark.jpg')] bg-cover bg-center">
-           <div className="w-full">
-             <Header />
-           </div>
+        <div className="flex flex-col items-center justify-end-safe w-full h-[730px] max-sm:h-[550px] bg-[url('/images/bgDark.jpg')] bg-cover bg-center">
 
-           <div className="flex flex-col items-start justify-start w-full px-20 my-5 gap-y-3 max-sm:px-1 max-sm:my-10">
+           <div className="flex flex-col items-start  w-full px-20 my-5 gap-y-3 max-sm:px-1 max-sm:my-10">
               <h1 className="text-8xl font-black text-white max-sm:text-3xl">CONSTRUISEZ - INNOVONS</h1>
 
               <div className="flex flex-row items-center justify-between w-full">
@@ -70,7 +66,6 @@ function Home() {
     <div className="px-20 my-5 w-full max-sm:px-1">
       <Separateur numero ="01"
                   titre ="Introduction"
-                  description ="By Axel"
                   annee ="2025" />
     </div>
     {/*partie Deux*/}
@@ -111,7 +106,6 @@ function Home() {
     <div className="px-20 my-5 w-full max-sm:px-1">
       <Separateur numero ="02"
                   titre ="Complement"
-                  description ="By Axel"
                   annee ="2025" />
     </div>
 
@@ -137,7 +131,6 @@ function Home() {
     <div className="px-20 my-5 w-full max-sm:px-1">
       <Separateur numero ="03"
                   titre ="Projets"
-                  description ="By Axel"
                   annee ="2025" />
     </div>
 
@@ -169,13 +162,13 @@ function Home() {
                 Avec SugWave, construire votre maison devient une expérience unique.
                 Au-delà de notre rôle de constructeur, nous sommes également votre conseiller, car construire une maison représente, 
                 pour la majorité, l’investissement d’une vie. C’est pourquoi nous veillons à ce que chaque projet soit durable, 
-                réfléchi et à la hauteur de vos attentes.. <ToggleText text="
+                réfléchi et à la hauteur de vos attentes.. </p> <ToggleText text="
                  Nous vous accompagnons à chaque étape : de la conception des plans jusqu’à la remise des clés.
                  Avec SugWave, vous bénéficiez d’un suivi personnalisé, de conseils avisés et de matériaux de qualité pour bâtir un foyer solide, esthétique et pérenne.
 
                  Notre objectif ?
                  Faire de votre projet une réussite, en alliant votre vision à notre expertise." />
-             </p>
+             
         </div>
 
 
@@ -185,7 +178,6 @@ function Home() {
     <div className="px-20 my-5 w-full max-sm:px-1">
       <Separateur numero ="04"
                   titre ="Article Du Jour"
-                  description ="By Axel"
                   annee ="2025" />
     </div>
 
@@ -251,12 +243,12 @@ function Home() {
 
     {/*Partie six*/}
     <div id="Contacts" className="flex flex-row bg-[url('/images/coverCinq.jpg')] bg-cover bg-center w-full h-[550px] p-20 max-sm:flex-col max-sm:p-1 max-sm:items-center max-sm:justify-center">
-       <div className="flex items-start justify-start w-1/2 max-sm:w-full">
+       <div className="flex items-center justify-center w-1/2 max-sm:w-full">
              <h1 className="text-7xl font-black text-white text-wrap max-sm:text-center">EXPRIMEZ VOUS</h1>
        </div>
 
        <div className="flex flex-col items-center justify-center w-1/2 gap-y-5 max-sm:w-full max-sm:my-10">
-            <h4 className="text-2xl font-medium text-wrap text-white w-3/4 text-start">
+            <h4 className="text-2xl font-medium text-wrap text-white w-3/4 lg:px-4 text-start">
                 Vous souhaitez en savoir plus sur nos services ?
             </h4>
 
@@ -266,61 +258,66 @@ function Home() {
                 n'hésitez pas à nous contacter. Nous sommes impatients de vous accompagner dans la réalisation de votre rêve.
             </p>
 
-            <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center ">
         <button onClick={handleClick} className="bg-white text-black px-4 py-2 rounded-2xl w-40">Contactez-nous </button>
-             {isClicked && (
+           {isClicked && (
+        <div className="fixed z-50 flex items-center justify-center h-screen">
         
-         <div className="fixed inset-0 flex flex-row w-full items-center justify-center bg-transparent backdrop-blur-sm z-50">
-          
-        <div className="flex flex-row w-[800px] items-center justify-center bg-white max-sm:w-screen max-sm:mx-2">
-          <img src="/images/bgOne.jpg" alt="bgOne" className="w-80 h-80 rounded-4xl max-sm:hidden" />
-          <form onSubmit={handleSubmit} className="min-w-[400px] justify-center items-center bg-white p-6 rounded flex flex-col gap-4">
-            
-            <button type="button" onClick={() => setIsClicked(false)} className="absolute top-4 right-4 max-sm:top-2 max-sm:right-2">
-              <img src="https://img.icons8.com/?size=100&id=8112&format=png&color=ffffff" alt="Close" className="w-10 h-10 hover:scale-110" />
-              </button>
-            
-            <label className="text-black w-full">
-              First Name:
-              <input id="firstName" name="firstName" type="text" className="block focus-visible:ring-0 focus-visible:border-0 border rounded px-2 py-1 mt-1 w-full" required />
-            </label>
+          <div className="relative flex flex-col md:flex-row w-[850px] max-sm:w-[95%] bg-white rounded-3xl shadow-xl overflow-hidden">
+            {/* Image côté gauche */}
+            <img src="/images/bgOne.jpg" alt="bgOne" className="w-1/2 h-auto object-cover hidden md:block" />
 
-            <label className="text-black w-full">
-              Last Name:
-              <input id="lastName" name="lastName" type="text" className="block focus-visible:ring-0 focus-visible:border-0 border rounded px-2 py-1 mt-1 w-full" required/>
-            </label>
+            {/* Formulaire */}
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full md:w-1/2 p-8" >
 
-            <label className="text-black w-full">
-              Email:
-              <input id="email" name="email" type="email" className="block focus-visible:ring-0 focus-visible:border-0 border rounded px-2 py-1 mt-1 w-full" value={formData.email} onChange={handleChange} required/>
-            </label>
+                {/* Bouton fermeture */}
+                <button type="button" onClick={() => setIsClicked(false)} className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition" >
+                  <X className="h-10 w-10"/>
+                </button>
 
-            <label className="text-black w-full">
-              Message:
-              <textarea id="message" name="message" className="block border rounded w-full px-2 py-1 mt-1" placeholder="votre message" value={formData.message} onChange={handleChange} required/>
-              </label>
-            <button type="submit" className="bg-black w-full text-white p-2 rounded">
+                <h2 className="text-2xl font-bold text-gray-800 text-center">
+                  Contactez-nous
+                </h2>
+                <p className="text-gray-500 text-center text-sm">
+                  Remplissez le formulaire ci-dessous et nous reviendrons vers vous.
+                </p>
+
+            {/* Inputs */}
+            <input id="Name" name="Name" type="text" placeholder="Nom & Prénom" value={formData.Name} onChange={handleChange}
+              className="flex-1 border rounded-xl px-4 py-2 focus:ring-2 focus:ring-black focus:outline-none"
+              required
+            />
+
+            <input id="contact" name="contact" type="text" placeholder="+225 0707070707" value={formData.contact} onChange={handleChange}
+              className="border rounded-xl px-4 py-2 focus:ring-2 focus:ring-black focus:outline-none"
+              required
+            />
+
+            <input id="email" name="email" type="email" placeholder="Adresse email" value={formData.email} onChange={handleChange}
+              className="border rounded-xl px-4 py-2 focus:ring-2 focus:ring-black focus:outline-none"
+              required
+            />
+
+            <textarea id="message" name="message" placeholder="Votre message..." value={formData.message} onChange={handleChange}
+              className="border rounded-xl px-4 py-2 h-28 resize-none focus:ring-2 focus:ring-black focus:outline-none"
+              required
+            />
+
+            <button
+              type="submit"
+              className="bg-black text-white py-3 rounded-xl font-semibold shadow hover:scale-105 transition-transform"
+            >
               Envoyer
             </button>
+        </form>
+        </div>
 
-            
-          </form>
-        </div>
-        </div>
-        )}
-       
-        
-      
-       
       </div>
+      )}
        </div>
 
     </div>
-
-    
-
-    {/*partie Footer*/}
-    <Footer />
+   </div>
 
     </section>
   )

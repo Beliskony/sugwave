@@ -1,5 +1,3 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Separateur from "../components/homeScreen/Separateur";
 import SpecialBox from "../components/homeScreen/SpecialBox";
 
@@ -8,12 +6,9 @@ function Service() {
   return (
     <section className="flex flex-col items-center justify-between h-full w-full">
         <div className="flex flex-col h-[550px] items-center justify-between w-full bg-[url('/images/servicebg.jpg')] bg-cover bg-center">
-            <div className="w-full">
-                <Header />
-            </div>
 
-            <div className="flex w-full items-center justify-center mb-52 max-sm:mb-10">
-                <h1 className="text-8xl text-white font-bold max-sm:text-5xl">Decouvez Nos Services</h1>
+            <div className="flex w-full items-center justify-center mt-48 max-sm:mb-10">
+                <h1 className="text-3xl md:text-6xl xl:text-8xl text-white text-center font-bold max-sm:text-5xl">Decouvez Nos Services</h1>
             </div>
         </div>
 
@@ -21,7 +16,6 @@ function Service() {
     <div className="px-20 my-5 w-full max-sm:px-1">
       <Separateur numero ="01"
                   titre ="Services Propose"
-                  description ="By Axel"
                   annee ="2025" />
     </div>
     
@@ -58,7 +52,6 @@ function Service() {
     <div className="px-20 my-5 w-full max-sm:px-1">
       <Separateur numero ="02"
                   titre ="Chiffres Clés"
-                  description ="By Axel"
                   annee ="2025" />
     </div>
 
@@ -81,11 +74,7 @@ function Service() {
         </div>
       
     </div>
-
-
-
-    {/*partie Footer*/}
-        <Footer />
+    
     </section>
   )
 }

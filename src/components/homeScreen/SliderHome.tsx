@@ -54,15 +54,22 @@ export default function SliderHome() {
 
  return (
     <section
-      className="relative flex items-center justify-center w-full h-[600px] bg-cover bg-center"
-      style={{ backgroundImage: `url(${slides[currentSlide].bg_image})` }}
-    >
+      className="relative flex items-center justify-center w-full h-[600px] overflow-hidden">
+
+      {slides.map((slide, index) => (
+        <div key={slide.id} className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+        index === currentSlide ? "opacity-100" : "opacity-0" }`}
+      
+          style={{ backgroundImage: `url(${slide.bg_image})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+      ))}
+
       {/* Carte centrale */}
       <div className="relative flex flex-col items-center bg-white bg-opacity-90 rounded-3xl shadow-2xl w-[300px] max-w-full p-6">
         <img
           src={slides[currentSlide].thumbnail}
           alt={slides[currentSlide].titre}
           className="w-64 h-64 object-cover rounded-2xl mb-6"
+          loading="lazy"
         />
         <h1 className="text-xl font-bold text-black mb-2 text-center">
           {slides[currentSlide].titre}

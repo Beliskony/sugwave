@@ -1,17 +1,12 @@
-import Header from "../components/Header"
-import Footer from "../components/Footer"
 import Separateur from "../components/homeScreen/Separateur"
 import ProjectBox from "../components/projets/ProjectBox"
 
 function Project() {
   return (
      <section className="flex flex-col items-center justify-between h-full w-full">
-        <div className="flex flex-col h-[550px] items-center justify-between w-full bg-[url('/images/projectBg.jpg')] bg-cover bg-right-bottom">
-            <div className="w-full">
-                <Header />
-            </div>
+        <div className="flex flex-col h-[550px] items-center justify-center w-full bg-[url('/images/projectBg.jpg')] bg-cover bg-center">
 
-            <div className="flex w-full items-center justify-center mb-52">
+            <div className="flex w-full items-center justify-center mt-20">
                 <h1 className="text-8xl text-center text-white font-bold max-sm:text-4xl">Decouvez Certains De Nos Projets</h1>
             </div>
         </div>
@@ -95,10 +90,6 @@ function Project() {
           </div>
         </div>
 
-
-
-        {/*partie Footer*/}
-        <Footer />
     </section>
   )
 }
