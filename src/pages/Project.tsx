@@ -15,7 +15,6 @@ function Project() {
         <div className="px-20 my-5 w-full max-sm:px-1">
             <Separateur numero ="01"
                   titre ="Projets Termines"
-                  description ="By Axel"
                   annee ="2025" />
         </div>
 
@@ -56,7 +55,6 @@ function Project() {
         <div className="px-20 my-5 w-full max-sm:px-1">
             <Separateur numero ="01"
                   titre ="Projets Termines"
-                  description ="By Axel"
                   annee ="2025" />
         </div>
 
