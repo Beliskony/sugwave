@@ -4,7 +4,7 @@ import SpecialBox from "../components/homeScreen/SpecialBox";
 
 function Service() {
   return (
-    <section className="flex flex-col items-center justify-between h-full w-full">
+    <section className="flex flex-col items-center justify-between h-full w-full mb-3">
         <div className="flex flex-col h-[550px] items-center justify-between w-full bg-[url('/images/servicebg.jpg')] bg-cover bg-center">
 
             <div className="flex w-full items-center justify-center mt-48 max-sm:mb-10">

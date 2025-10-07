@@ -11,7 +11,7 @@ const ToggleText: React.FC<ToggleTextProps> = ({ text }) => {
         <div className="flex flex-col w-full">
             <div className="flex flex-row w-full items-center justify-end">
                 <button
-                    className="flex flex-row items-center text-black hover:underline focus:outline-none"
+                    className="flex flex-row items-center hover:underline focus:outline-none"
                     onClick={() => setExpanded((prev) => !prev)}
                 >
                     {expanded ? (
@@ -32,7 +32,7 @@ const ToggleText: React.FC<ToggleTextProps> = ({ text }) => {
                 </button>
             </div>
             {expanded && (
-                <p className="text-black w-full mt-2">{text}</p>
+                <p className="w-full mt-2 text-xl text-start font-light text-black max-sm:text-xs text-wrap">{text}</p>
             )}
         </div>
     );

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Home from './pages/Home';
@@ -6,6 +7,19 @@ import Service from './pages/Service';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // défilement fluide
+    });
+  }, [pathname]);
+
+  return null;
+}
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -60,9 +74,10 @@ function AnimatedRoutes() {
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <AnimatedRoutes />
-      <Footer />
+      <ScrollToTop/>
+        <Header />
+          <AnimatedRoutes />
+        <Footer />
     </BrowserRouter>
   );
 }

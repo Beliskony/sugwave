@@ -1,5 +1,6 @@
 import Separateur from "../components/homeScreen/Separateur"
-import ProjectBox from "../components/projets/ProjectBox"
+import ProjectDetails from "../components/projets/DetailsProject"
+import { projets } from "../data/ProjectData"
 
 function Project() {
   return (
@@ -19,33 +20,17 @@ function Project() {
         </div>
 
       {/*partie Projets finis*/}
-        <div className="flex flex-col item-center justify-center w-full px-20 gap-y-10 max-sm:px-1">
+        <div className="flex flex-col border-b border-black py-5 item-center justify-center w-full px-3 md:px-8 lg:px-20 gap-y-10">
           <div className="w-full">
             <h3 className="text-4xl font-bold text-left text-wrap max-sm:text-2xl max-sm:text-center">Quelques un de nos projets END</h3>
           </div>
 
-          <div className="grid grid-cols-4 gap-4 w-full max-sm:grid-cols-2">
-            <ProjectBox title="Construction d'un duplexe"
-                        description=""
-                        imageUrl="/images/duplexe.jpg"/>
-            
-            <ProjectBox title="Renovation d'un appartement"
-                        description=""
-                        imageUrl="/images/renovation.jpg"/>
-
-            <ProjectBox title="Extension d'une maison a Abidjan-Riviera"
-                        description=""
-                        imageUrl="/images/Abidjan.jpg"/>
-            
-            <ProjectBox title="Maison de luxe"
-                        description=""
-                        imageUrl="/images/projet1.jpg"/>
-            
-            <ProjectBox title="Creation d'une piscine"
-                        description=""
-                        imageUrl="/images/pool.jpg"/>
-
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
+            {projets.filter((p) =>(p.status === "Terminé")).map((projetsEND, index) => (
+              <ProjectDetails
+                              key={index}
+                              project={projetsEND} />
+            ))}
           </div>
         </div>
 
@@ -54,36 +39,22 @@ function Project() {
          {/*Separateur*/}
         <div className="px-20 my-5 w-full max-sm:px-1">
             <Separateur numero ="01"
-                  titre ="Projets Termines"
+                  titre ="Projets En Cours"
                   annee ="2025" />
         </div>
 
       {/*partie Projets en cours*/}
-        <div className="flex flex-col border-b border-black py-5 item-center justify-center w-full px-20 gap-y-10 max-sm:px-1">
+        <div className="flex flex-col py-5 item-center justify-center w-full px-3 md:px-8 lg:px-20 gap-y-10">
           <div className="w-full">
             <h3 className="text-4xl font-bold text-left text-wrap max-sm:text-2xl max-sm:text-center">Quelques un de nos projets IN-PROGRESS</h3>
           </div>
 
-          <div className="grid grid-cols-4 gap-4 w-full max-sm:grid-cols-2">
-            <ProjectBox title="Chantier de construction- Bingerville"
-                        description=""
-                        imageUrl="/images/chantier.jpg"/>
-            
-            <ProjectBox title="fondation d'une maison a Abidjan"
-                        description=""
-                        imageUrl="/images/fondation.jpg"/>
-            
-            <ProjectBox title="Tour centrale"
-                        description=""
-                        imageUrl="/images/etage.jpg"/>
-            
-            <ProjectBox title="Pose de feu de signalisation"
-                        description=""
-                        imageUrl="/images/feu.jpg"/>
-
-            <ProjectBox title="appartement a Abidjan"
-                        description=""
-                        imageUrl="/images/appartement.jpg"/>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full">
+           {projets.filter((p) =>(p.status === "En cours")).map((projetsEnCours, index) => (
+              <ProjectDetails
+                              key={index}
+                              project={projetsEnCours} />
+            ))}
             
           </div>
         </div>
