@@ -32,7 +32,7 @@ const ToggleText: React.FC<ToggleTextProps> = ({ text }) => {
                 </button>
             </div>
             {expanded && (
-                <p className="w-full mt-2 text-xl text-start font-light text-black max-sm:text-xs text-wrap">{text}</p>
+                <p className="w-full mt-2 text-xl text-start font-light text-black dark:text-white max-sm:text-xs text-wrap">{text}</p>
             )}
         </div>
     );

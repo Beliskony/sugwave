@@ -5,7 +5,7 @@ import { projets } from "../data/ProjectData"
 function Project() {
   return (
      <section className="flex flex-col items-center justify-between h-full w-full">
-        <div className="flex flex-col h-[550px] items-center justify-center w-full bg-[url('/images/projectBg.jpg')] bg-cover bg-center">
+        <div className="flex flex-col h-[550px] items-center justify-center w-full bg-[url('/images/projectBg.webp')] bg-cover bg-center">
 
             <div className="flex w-full items-center justify-center mt-20">
                 <h1 className="text-8xl text-center text-white font-bold max-sm:text-4xl">Decouvez Certains De Nos Projets</h1>

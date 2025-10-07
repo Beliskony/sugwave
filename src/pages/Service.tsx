@@ -56,7 +56,7 @@ function Service() {
     </div>
 
     {/*partie Chiffres Clés*/}
-    <div className="relative flex flex-row min-h-48 w-full items-center justify-around bg-[url('/images/bgSlim.jpg')] bg-center bg-cover gap-x-10 px-20 max-sm:px-1">
+    <div className="relative flex flex-row min-h-48 w-full items-center justify-around bg-[url('/images/bgSlim.webp')] bg-center bg-cover gap-x-10 px-20 max-sm:px-1">
       <div className="absolute flex flex-row inset-0 bg-black opacity-50"></div>
         <div className="flex flex-col items-center justify-center z-50">
             <h1 className="text-8xl text-white font-bold max-sm:text-4xl">100+</h1>

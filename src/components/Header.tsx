@@ -1,9 +1,11 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useDarkMode } from "../hook/useDarkMode";
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
 
 const Header = () => {
+  const { isDark, toggleDarkMode } = useDarkMode(); 
   const [isClicked, setIsClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -47,11 +49,19 @@ const Header = () => {
       </nav>
 
 
-    <div className="flex flex-row items-center">
+    <div className="flex flex-row items-center gap-x-3.5">
       <button onClick={handleClick}
         className="bg-white text-black px-6 py-2 rounded-2xl w-44 font-semibold shadow hover:scale-105 transition-transform" >
         Contactez-nous
       </button>
+
+      {/* Bascule du thème */}
+        <button
+          onClick={toggleDarkMode}
+          className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
+        >
+          {isDark ? <Sun className="text-yellow-400 w-6 h-6" /> : <Moon className="text-gray-300 w-6 h-6" />}
+        </button>
 
     </div>
 
