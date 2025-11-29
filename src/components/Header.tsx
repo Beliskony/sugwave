@@ -36,7 +36,7 @@ const Header = () => {
     <motion.section 
       className={`fixed w-full h-20 py-2 z-50 flex flex-row items-center justify-between px-8 max-sm:px-4 transition-all duration-300 ${
         isScrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-lg dark:bg-gray-900/95" 
+          ? "bg-white/95 backdrop-blur-md shadow-lg dark:bg-black/80" 
           : "bg-transparent backdrop-blur-sm"
       }`}
       initial={{ y: -100, opacity: 0 }}
@@ -81,14 +81,14 @@ const Header = () => {
               to={item.path}
               className={`relative px-4 py-2 font-medium transition-all duration-300 ${
                 location.pathname === item.path
-                  ? "text-black dark:text-white font-bold"
-                  : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
+                  ? `${isScrolled ? "text-black" : "text-white"} dark:text-white font-bold`
+                  : `${isScrolled ? "text-black/45" : "text-white"} dark:text-gray-300/45 hover:text-black dark:hover:text-white`
               }`}
             >
               {item.label}
               {location.pathname === item.path && (
                 <motion.div
-                  className="absolute bottom-0 left-0 w-full h-0.5 bg-black dark:bg-white"
+                  className={`absolute bottom-0 left-0 w-full h-0.5 ${isScrolled ? "bg-black" : "bg-white"} dark:bg-white`}
                   layoutId="underline"
                   transition={{ duration: 0.3 }}
                 />
@@ -121,7 +121,7 @@ const Header = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Menu className="h-8 w-8 text-white" />
+            <Menu className={`h-8 w-8 ${isScrolled ? "text-black" : "text-white"}`} />
           </motion.button>
         </div>
       </div>
@@ -248,19 +248,7 @@ const Header = () => {
                 </div>
               </motion.div>
 
-              {/* Informations de contact (optionnel) */}
-              <motion.div 
-                className="px-6 pb-6"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1 }}
-              >
-                <div className="text-center">
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
-                    © 2024 SugWave. Tous droits réservés.
-                  </p>
-                </div>
-              </motion.div>
+             
             </motion.div>
           </>
         )}
