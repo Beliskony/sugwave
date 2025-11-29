@@ -20,16 +20,10 @@ export const slidesData: SliderHome[] = [{
     thumbnail: "/images/pool.webp"
 },{
     id: 3,
-    titre: "Des Buildings Modernes",
-    description: "Nous construisons des bâtiments modernes et bien conçus en accord avec les normes.",
+    titre: "Des maisons modernes",
+    description: "Nous construisons des maisons modernes, durables et parfaitement conçues, en accord avec les normes en vigueur.",
     bg_image: "/images/building.webp",
     thumbnail: "/images/building.webp"
-},{
-    id: 4,
-    titre: "Structure Design",
-    description: "Embellissez votre maison avec des designs modernes et uniques.",
-    bg_image: "/images/designOne.webp",
-    thumbnail: "/images/designOne.webp"
 },{
     id: 5,
     titre: "Decoration Interieure & Exterieure",

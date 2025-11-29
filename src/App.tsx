@@ -74,7 +74,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop/>
+      
         <Header />
           <AnimatedRoutes />
         <Footer />

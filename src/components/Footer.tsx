@@ -15,7 +15,7 @@ const Footer = () => {
             <img key={logoSrc} src={logoSrc} alt="Logo du site" className="w-20 h-20 md:w-32 md:h-32 rounded-full" />
         
           <h4 className="text-2xl md:text-3xl font-black text-black dark:text-white tracking-wide uppercase">
-            Subwave
+            KSK-BUILDING
           </h4>
         </div>
 
@@ -122,7 +122,7 @@ const Footer = () => {
       {/* Bas de page */}
       <div className="border-t border-gray-200 w-full py-5 flex justify-center">
         <p className="text-sm md:text-base text-gray-400 font-medium text-center">
-          © {new Date().getFullYear()} Subwave — Tous droits réservés.
+          © {new Date().getFullYear()} KSK-BUILDING — Tous droits réservés.
         </p>
       </div>
     </footer>
