@@ -14,12 +14,21 @@ function Service() {
 
   // Animations pour les chiffres clés
   const counterVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i: number) => ({
+  hidden: { opacity: 0, y: 50 },
+  visible: (i: number) => {
+    console.log(i);
+
+    return {
       opacity: 1,
       y: 0
-    })
-  };
+    };
+  }
+};
+
+
+  
+  
+  
 
   // Animation pour la grille des services
   const gridVariants = {
