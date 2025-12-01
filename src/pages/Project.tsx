@@ -100,7 +100,7 @@ function Project() {
     <section className="flex flex-col items-center justify-between h-full w-full">
       {/* Bannière Hero avec animation */}
       <motion.div 
-        className="flex flex-col h-[550px] items-center justify-center w-full bg-[url('/images/projectBg.webp')] bg-cover bg-center relative overflow-hidden"
+        className="flex flex-col h-[650px] max-sm:h-[400px] items-center justify-center w-full bg-[url('/images/projectBg.webp')] bg-cover bg-center relative overflow-hidden"
         ref={ref}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}

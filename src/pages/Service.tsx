@@ -75,7 +75,7 @@ function Service() {
     <section className="flex flex-col items-center justify-between h-full w-full mb-3">
       {/* Bannière Hero avec animation */}
       <motion.div 
-        className="flex flex-col h-[550px] items-center justify-between w-full bg-[url('/images/servicebg.jpg')] bg-cover bg-center relative overflow-hidden"
+        className="flex flex-col h-[650px] max-sm:h-[400px] items-center justify-between w-full bg-[url('/images/servicebg.jpg')] bg-cover bg-center relative overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={heroVariants}

@@ -108,7 +108,7 @@ function ProjectSection() {
           viewport={{ once: true, margin: "-50px" }}
           variants={titleVariants}
         >
-          NOS PROJETS
+          QUELQUES PROJETS
         </motion.h1>
 
         {/* Grille des projets avec animation en cascade */}
@@ -138,28 +138,7 @@ function ProjectSection() {
           ))}
         </motion.div>
 
-        {/* Texte descriptif animé */}
-        <motion.div 
-          className="flex flex-col items-center justify-between w-full my-5 gap-y-5"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={textVariants}
-        >
-          <motion.p 
-            className="text-xl text-start font-light text-black dark:text-white max-sm:text-xs text-wrap w-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
-          >
-            Avec SugWave, construire votre maison devient une expérience unique.
-            Au-delà de notre rôle de constructeur, nous sommes également votre conseiller, car construire une maison représente, 
-            pour la majorité, l'investissement d'une vie. C'est pourquoi nous veillons à ce que chaque projet soit durable, 
-            réfléchi et à la hauteur de vos attentes. Nous vous accompagnons à chaque étape : de la conception des plans jusqu'à la remise des clés.
-            Avec SugWave, vous bénéficiez d'un suivi personnalisé, de conseils avisés et de matériaux de qualité pour bâtir un foyer solide, esthétique et pérenne.
-            Notre objectif? Faire de votre projet une réussite, en alliant votre vision à notre expertise.
-          </motion.p>
-        </motion.div>
+      
       </div>
     </>
   );

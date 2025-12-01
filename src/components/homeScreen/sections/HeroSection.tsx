@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full h-[730px] max-sm:h-[400px] bg-[url('/images/bgDark.webp')] bg-cover bg-center">
+    <div className="relative flex flex-col items-center justify-center w-full h-[650px] max-sm:h-[400px] bg-[url('/images/bgDark.webp')] bg-cover bg-center">
       {/* Overlay avec animation très lente */}
       <motion.div 
         className="absolute inset-0 bg-black/15"
