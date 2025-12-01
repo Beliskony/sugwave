@@ -2,8 +2,10 @@ import { motion } from 'framer-motion';
 import Separateur from "../components/homeScreen/Separateur";
 import ProjectDetails from "../components/projets/DetailsProject";
 import { projets } from "../data/ProjectData";
+import { useAnimationOnLoad } from '../hook/useAnimationOnLoad';
 
 function Project() {
+  const { ref, isVisible } = useAnimationOnLoad();
   // Animations pour la bannière hero
   const heroVariants = {
     hidden: { opacity: 0, scale: 1.1 },
@@ -99,8 +101,9 @@ function Project() {
       {/* Bannière Hero avec animation */}
       <motion.div 
         className="flex flex-col h-[550px] items-center justify-center w-full bg-[url('/images/projectBg.webp')] bg-cover bg-center relative overflow-hidden"
+        ref={ref}
         initial="hidden"
-        animate="visible"
+        animate={isVisible ? "visible" : "hidden"}
         variants={heroVariants}
       >
         {/* Overlay animé */}

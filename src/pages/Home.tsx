@@ -4,6 +4,7 @@ import Complement from "../components/homeScreen/sections/Complement"
 import ProjectSection from "../components/homeScreen/sections/ProjectSection"
 import ContactSection from "../components/homeScreen/sections/ContactSection"
 import DevisSection from "../components/homeScreen/sections/DevisSection"
+import Temoignage from "../components/homeScreen/sections/Temoignage"
 
 
 
@@ -24,6 +25,8 @@ function Home() {
 
       {/*Partie quatre*/}
       <ProjectSection />
+
+      <Temoignage />
 
       {/* Partie cinq : Retrouvez-nous */}
       <ContactSection />

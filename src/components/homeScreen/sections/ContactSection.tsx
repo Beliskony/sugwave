@@ -124,7 +124,7 @@ function ContactSection() {
         viewport={{ once: true, margin: "-50px" }}
         variants={separatorVariants}
       >
-        <Separateur numero="04" titre="Section Contact" annee="2025" />
+        <Separateur numero="05" titre="Section Contact" annee="2025" />
       </motion.div>
 
       <motion.div 

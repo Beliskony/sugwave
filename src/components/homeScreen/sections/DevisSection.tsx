@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import DevisForm from "../DevisForm";
 import { useAnimationOnLoad } from '../../../hook/useAnimationOnLoad';
+import { useState } from 'react';
 
 function DevisSection() {
   const { ref, isVisible } = useAnimationOnLoad();
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   // Animation pour le conteneur principal
   const containerVariants = {
@@ -73,6 +75,7 @@ function DevisSection() {
   };
 
   return (
+    <>
     <motion.div 
       ref={ref}
       className="flex xl:flex-row flex-col bg-[url('/images/coverCinq.webp')] bg-cover bg-center w-full h-[550px] p-20 max-sm:p-1 max-sm:items-center max-sm:justify-center relative overflow-hidden"
@@ -139,10 +142,26 @@ function DevisSection() {
             transition: { duration: 0.3 }
           }}
         >
-          <DevisForm />
+          <motion.button
+            onClick={() => setIsFormOpen(true)}
+            className="bg-white  px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 max-sm:px-6 max-sm:py-3"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Demander un Devis
+          </motion.button>
+
+        
         </motion.div>
       </motion.div>
     </motion.div>
+
+     {isFormOpen && (
+          <DevisForm 
+          isClicked={isFormOpen}
+          setIsClicked={setIsFormOpen} />
+        )}
+  </>
   );
 }
 

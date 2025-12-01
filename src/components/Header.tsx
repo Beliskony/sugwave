@@ -103,7 +103,7 @@ const Header = () => {
       <div className="flex items-center gap-x-4">
         <motion.button
           onClick={toggleDarkMode}
-          className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all border border-white/20 dark:border-gray-600 max-sm:hidden flex"
+          className="p-3 rounded-full bg-white/60 hover:bg-white/20 transition-all border border-black/30 dark:border-gray-600 max-sm:hidden flex"
           whileHover={{ scale: 1.1, rotate: 15 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -122,7 +122,7 @@ const Header = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Menu className={`h-8 w-8 ${isScrolled ? "text-black" : "text-white"}`} />
+            <Menu className={`h-10 w-10 ${isScrolled ? "text-[#0a3f75]" : "text-white"}`} />
           </motion.button>
         </div>
       </div>
@@ -146,7 +146,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: "easeOut" as const }}
-              className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-900 shadow-2xl min-h-screen z-50 md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-black shadow-2xl min-h-screen z-50 md:hidden overflow-y-auto"
             >
               {/* En-tête du menu mobile */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
@@ -157,9 +157,9 @@ const Header = () => {
                   transition={{ delay: 0.1 }}
                 >
                   <img 
-                    src="/images/LogoNoBG.png" 
+                    src="/favicon/favicon-96x96.png" 
                     alt="Logo" 
-                    className="w-12 h-12"
+                    className="w-12 h-12 bg-white px-1 rounded-xl"
                   />
                   <span className="ml-3 text-lg font-bold text-black dark:text-white">
                     Menu

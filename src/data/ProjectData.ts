@@ -20,7 +20,7 @@ export const projets: IProject[] =[
     location: "Abidjan - Cocody",
     date: "2025",
     status: "Terminé",
-    gallery: ["/images/ksk/4.jpeg","/images/ksk/8.jpeg", "/images/ksk/10.jpeg", "/images/ksk/1.mp4"   ],
+    gallery: ["/images/ksk/4.jpeg","/images/ksk/8.jpeg", "/images/ksk/10.jpeg", "/images/ksk/1.mp4","/images/ksk/9.jpeg"],
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const projets: IProject[] =[
     location: "Abidjan - Marcory",
     date: "2025",
     status: "Terminé",
-    gallery: ["/images/ksk/11.jpeg", "/images/ksk/15.jpeg", "/images/ksk/16.jpeg", "/images/ksk/19.jpeg", "/images/ksk/9.jpeg"],
+    gallery: ["/images/ksk/11.jpeg", "/images/ksk/15.jpeg", "/images/ksk/16.jpeg", "/images/ksk/19.jpeg"],
   },
   {
     id: 4,
@@ -46,14 +46,14 @@ export const projets: IProject[] =[
   },
   {
     id: 5,
-    title: "Création d'une piscine",
+    title: "Posage de pavet",
     description: "Construction d’une piscine moderne avec espace détente et terrasse.",
-    coverImage: "/images/pool.webp",
-    client: "Résidence privée",
+    coverImage: "/images/ksk/6.jpeg",
+    client: "Particulier",
     location: "Assinie",
     date: "2025",
     status: "Terminé",
-    gallery: ["/images/pool.webp"],
+    gallery: ["/images/ksk/18.jpeg", "/images/ksk/22.jpeg", "/images/ksk/26.jpeg"],
   },
   {
     id: 6,

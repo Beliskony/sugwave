@@ -1,8 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import { X } from "lucide-react";
 
-const DevisForm = () => {
-  const [isClicked, setIsClicked] = useState(false);
+interface DevisFormProps {
+  isClicked: boolean;
+  setIsClicked: (value: boolean) => void;
+}
+
+const DevisForm: React.FC<DevisFormProps> = ({ isClicked, setIsClicked }) => {
   const [formData, setFormData] = useState({
     nom: "",
     contact: "",
@@ -15,7 +19,6 @@ const DevisForm = () => {
 
   const modalRef = useRef(null);
 
-  const handleClick = () => setIsClicked(true);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -60,19 +63,17 @@ const DevisForm = () => {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("mousedown", handleClickOutside);
+
+      document.body.style.overflow = "auto";
     };
   }, [isClicked]);
 
-  return (
-    <div className="flex flex-row items-center py-7">
-      <button
-        onClick={handleClick}
-        className="bg-white text-black px-4 py-2 rounded-2xl w-60 cursor-pointer border border-black hover:bg-gray-100 transition"
-      >
-        Obtenir un devis gratuit
-      </button>
+  if (!isClicked) {
+    return null
+  }
 
-      {isClicked && (
+  return (
+      
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
           <div
             ref={modalRef}
@@ -192,8 +193,7 @@ const DevisForm = () => {
             </form>
           </div>
         </div>
-      )}
-    </div>
+
   );
 };
 

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Separateur from "../components/homeScreen/Separateur";
 import SpecialBox from "../components/homeScreen/SpecialBox";
-import { Link } from 'react-router-dom';
+import serviceData from '../data/ServiceData';
 
 
 function Service() {
@@ -152,38 +152,7 @@ function Service() {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        {[
-          {
-            titre: "Construction de Maison",
-            icones: "https://img.icons8.com/?size=100&id=l83K3H9MIrGQ&format=png&color=000000",
-            details: "Nous bâtissons vos projets immobiliers sur mesure, de la conception aux finitions, avec des matériaux de qualité et dans le respect des normes."
-          },
-          {
-            titre: "Construction de Piscine",
-            icones: "https://img.icons8.com/?size=100&id=59G0LLKxAwxU&format=png&color=000000",
-            details: "Envie d'une piscine privée ? Nous réalisons des piscines sur mesure, avec des systèmes de filtration modernes et des finitions élégantes."
-          },
-          {
-            titre: "Rénovation & Réparation",
-            icones: "https://img.icons8.com/?size=100&id=ldxwslzHXHyV&format=png&color=000000",
-            details: "Nous redonnons vie à votre habitat avec des rénovations complètes tout en respectant les normes modernes de construction et d'isolation."
-          },
-          {
-            titre: "Extension",
-            icones: "https://img.icons8.com/?size=100&id=84033&format=png&color=000000",
-            details: "Agrandissez votre espace de vie avec nos solutions d'extension : nouvelle pièce, véranda, ou agrandissement de surface existante."
-          },
-          {
-            titre: "Aménagement Paysager",
-            icones: "https://img.icons8.com/?size=100&id=392&format=png&color=000000",
-            details: "Nous créons des espaces extérieurs harmonieux avec des aménagements paysagers sur mesure : terrasses, allées, éclairage et végétation."
-          },
-          {
-            titre: "Design Intérieur & Extérieur", 
-            icones: "https://img.icons8.com/?size=100&id=4JdTM07Jsdm9&format=png&color=000000",
-            details: "Notre équipe de designers vous accompagne pour créer des espaces esthétiques et fonctionnels, intérieurs comme extérieurs."
-          }
-        ].map((service, index) => (
+        {serviceData.map((service, index) => (
           <motion.div 
             key={index}
             variants={itemVariants}
@@ -259,7 +228,7 @@ function Service() {
         
         {[
           { number: "100+", text: "Projets Réalisés" },
-          { number: "50+", text: "Clients Satisfaits" },
+          { number: "80+", text: "Clients Satisfaits" },
           { number: "10+", text: "Années d'Expérience" },
           { number: "95%", text: "Taux de Satisfaction" }
         ].map((stat, index) => (
@@ -286,44 +255,7 @@ function Service() {
         ))}
       </motion.div>
 
-      {/* Section CTA */}
-      <motion.div 
-        className="w-full px-20 my-16 max-sm:px-5"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut" as const }}
-      >
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-3xl p-12 text-center text-white max-sm:p-8">
-          <motion.h2 
-            className="text-4xl font-bold mb-6 max-sm:text-2xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Prêt à Concrétiser Votre Projet ?
-          </motion.h2>
-          <motion.p 
-            className="text-xl mb-8 max-sm:text-base"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            Contactez-nous dès aujourd'hui pour une consultation gratuite et un devis personnalisé.
-          </motion.p>
-          <Link to="/#Contacts" >
-          <motion.button
-            className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 max-sm:px-6 max-sm:py-3"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Demander un Devis
-          </motion.button>
-          </Link>
-        </div>
-      </motion.div>
+
     </section>
   );
 }

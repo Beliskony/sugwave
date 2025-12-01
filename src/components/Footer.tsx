@@ -70,19 +70,8 @@ const Footer = () => {
             src={logoSrc} 
             alt="Logo du site" 
             className="w-28 h-20 md:w-24 md:h-24 rounded-xl dark:bg-white object-cover"
-            whileHover={{ 
-              scale: 1.1,
-              rotate: 5,
-              transition: { duration: 0.3 }
-            }}
           />
-          <motion.h4 
-            className="text-2xl md:text-3xl font-black text-black dark:text-white tracking-wide uppercase"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            KSK-BUILDING
-          </motion.h4>
+       
         </div>
       </motion.div>
 
