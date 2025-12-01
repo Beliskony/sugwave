@@ -68,22 +68,6 @@ function ProjectSection() {
     }
   };
 
-  // Animation pour le texte descriptif
-  const textVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 40 
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        duration: 1.2,
-        ease: "easeOut" as const,
-        delay: 1.2
-      }
-    }
-  };
 
   return (
     <>
