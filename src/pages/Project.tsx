@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import Separateur from "../components/homeScreen/Separateur"
-import ProjectDetails from "../components/projets/DetailsProject"
-import { projets } from "../data/ProjectData"
+import Separateur from "../components/homeScreen/Separateur";
+import ProjectDetails from "../components/projets/DetailsProject";
+import { projets } from "../data/ProjectData";
 
 function Project() {
   // Animations pour la bannière hero
@@ -111,7 +111,7 @@ function Project() {
           transition={{ duration: 1 }}
         />
         
-        <div className="flex w-full items-center justify-center mt-20 relative z-10">
+        <div className="flex w-full items-center justify-center mt-20 relative">
           <motion.h1 
             className="text-8xl text-center text-white font-bold max-sm:text-4xl max-sm:px-4"
             initial={{ opacity: 0, y: 100 }}
@@ -340,33 +340,7 @@ function Project() {
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" as const }}
       >
-        <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-12 text-center text-white max-sm:p-8">
-          <motion.h2 
-            className="text-4xl font-bold mb-6 max-sm:text-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Votre Projet Suivant ?
-          </motion.h2>
-          <motion.p 
-            className="text-xl mb-8 max-sm:text-base"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            Inspiré par nos réalisations ? Parlons de votre prochain projet dès aujourd'hui.
-          </motion.p>
-          <motion.button
-            className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 max-sm:px-6 max-sm:py-3"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Discuter de mon projet
-          </motion.button>
-        </div>
+
       </motion.div>
     </section>
   );

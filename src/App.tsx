@@ -72,6 +72,7 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  
   return (
     <BrowserRouter>
       <ScrollToTop/>

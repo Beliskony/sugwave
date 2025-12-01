@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
-import Separateur from "../Separateur"
-import ToggleText from "../ToggleText"
+import Separateur from "../Separateur";
+import ToggleText from "../ToggleText";
+import { useAnimationOnLoad } from '../../../hook/useAnimationOnLoad';
 
 function ContactSection() {
+  const { ref, isVisible } = useAnimationOnLoad();
   // Animations pour le séparateur
   const separatorVariants = {
     hidden: { opacity: 0, x: -50 },
@@ -116,8 +118,9 @@ function ContactSection() {
       {/* Separateur animé */}
       <motion.div 
         className="lg:px-20 my-5 w-full px-5"
+        ref={ref}
         initial="hidden"
-        whileInView="visible"
+        animate={isVisible ? "visible" : "hidden"}
         viewport={{ once: true, margin: "-50px" }}
         variants={separatorVariants}
       >

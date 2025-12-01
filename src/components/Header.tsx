@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <motion.section 
-      className={`fixed w-full h-20 py-2 z-50 flex flex-row items-center justify-between px-8 max-sm:px-4 transition-all duration-300 ${
+      className={`fixed w-full h-20 py-2 z-20 flex flex-row items-center justify-between px-8 max-sm:px-4 transition-all duration-300 ${
         isScrolled 
           ? "bg-white/95 backdrop-blur-md shadow-lg dark:bg-black/80" 
           : "bg-transparent backdrop-blur-sm"
@@ -42,6 +42,7 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" as const }}
+       
     >
       {/* Logo */}
       <motion.div 
@@ -51,9 +52,9 @@ const Header = () => {
       >
         <Link to="/">
           <motion.img 
-            src="/images/LogoNoBG.png" 
+            src="/favicon/web-app-manifest-512x512.png" 
             alt="Logo" 
-            className="w-16 h-16 max-sm:w-14 max-sm:h-14"
+            className="w-16 h-16 max-sm:w-14 max-sm:h-14 bg-white/95 rounded-xl px-0.5"
             whileHover={{ rotate: 5 }}
             transition={{ duration: 0.3 }}
           />
@@ -132,7 +133,7 @@ const Header = () => {
           <>
             {/* Overlay sombre */}
             <motion.div
-              className="fixed inset-0 bg-black/60 z-40 md:hidden"
+              className="fixed inset-0 bg-black/60 z-10 md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -145,7 +146,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.4, ease: "easeOut" as const }}
-              className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-900 shadow-2xl z-50 md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-900 shadow-2xl min-h-screen z-50 md:hidden overflow-y-auto"
             >
               {/* En-tête du menu mobile */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">

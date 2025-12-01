@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
-import DevisForm from "../DevisForm"
+import DevisForm from "../DevisForm";
+import { useAnimationOnLoad } from '../../../hook/useAnimationOnLoad';
 
 function DevisSection() {
+  const { ref, isVisible } = useAnimationOnLoad();
+
   // Animation pour le conteneur principal
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -69,25 +72,12 @@ function DevisSection() {
     }
   };
 
-  // Animation pour le background (effet parallaxe)
-  const backgroundVariants = {
-    hidden: { scale: 1.1 },
-    visible: {
-      scale: 1,
-      transition: {
-        duration: 1.5,
-        ease: "easeOut" as const
-      }
-    }
-  };
-
   return (
     <motion.div 
-      id="Contacts" 
+      ref={ref}
       className="flex xl:flex-row flex-col bg-[url('/images/coverCinq.webp')] bg-cover bg-center w-full h-[550px] p-20 max-sm:p-1 max-sm:items-center max-sm:justify-center relative overflow-hidden"
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      animate={isVisible ? "visible" : "hidden"}
       variants={containerVariants}
     >
       {/* Overlay animé */}
@@ -98,11 +88,8 @@ function DevisSection() {
         transition={{ duration: 1 }}
       />
 
-      {/* Background avec effet de parallaxe */}
-      <motion.div 
-        className="absolute inset-0 bg-[url('/images/coverCinq.webp')] bg-cover bg-center"
-        variants={backgroundVariants}
-      />
+      {/* Background fixe (pas besoin d'animation) */}
+      <div className="absolute inset-0 bg-[url('/images/coverCinq.webp')] bg-cover bg-center" />
 
       {/* Partie gauche - Titre */}
       <motion.div 
@@ -152,9 +139,8 @@ function DevisSection() {
             transition: { duration: 0.3 }
           }}
         >
+          <DevisForm />
         </motion.div>
-
-        <DevisForm />
       </motion.div>
     </motion.div>
   );

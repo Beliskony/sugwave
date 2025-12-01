@@ -1,13 +1,13 @@
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, ArrowUp } from "lucide-react"
 import { Link } from "react-router-dom"
-import { useDarkMode } from "../hook/useDarkMode"
+//import { useDarkMode } from "../hook/useDarkMode"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState, useEffect } from "react"
 
 const Footer = () => {
-  const { isDark } = useDarkMode();
+  //const { isDark } = useDarkMode();
   const [isVisible, setIsVisible] = useState(false);
-  const logoSrc = isDark ? "/images/LogoBlack.png" : "/images/LogoFondNoBG.png";
+  const logoSrc = "/favicon/web-app-manifest-512x512.png";
 
   // Show/hide scroll to top button
   useEffect(() => {
@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="relative w-full flex flex-col items-center justify-center border-t-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900"
+      className="relative w-full flex flex-col items-center justify-center border-t-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-black/40"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -69,7 +69,7 @@ const Footer = () => {
             key={logoSrc} 
             src={logoSrc} 
             alt="Logo du site" 
-            className="w-20 h-20 md:w-24 md:h-24 rounded-full"
+            className="w-28 h-20 md:w-24 md:h-24 rounded-xl dark:bg-white object-cover"
             whileHover={{ 
               scale: 1.1,
               rotate: 5,
@@ -294,7 +294,7 @@ const Footer = () => {
 
       {/* Bas de page */}
       <motion.div 
-        className="border-t border-gray-200 dark:border-gray-700 w-full py-6 flex justify-center bg-gray-50 dark:bg-gray-800"
+        className="border-t border-gray-200 dark:border-gray-700 w-full py-6 flex justify-center bg-gray-50 dark:bg-black/40"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

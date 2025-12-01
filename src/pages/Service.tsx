@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import Separateur from "../components/homeScreen/Separateur";
 import SpecialBox from "../components/homeScreen/SpecialBox";
+import { Link } from 'react-router-dom';
+
 
 function Service() {
+
   // Animations pour la bannière hero
   const heroVariants = {
     hidden: { opacity: 0, scale: 1.1 },
@@ -86,7 +89,7 @@ function Service() {
           transition={{ duration: 1 }}
         />
         
-        <div className="flex w-full items-center justify-center mt-48 max-sm:mb-10 relative z-10">
+        <div className="flex w-full items-center justify-center mt-48 max-sm:mb-10 relative">
           <motion.h1 
             className="text-3xl md:text-6xl xl:text-8xl text-white text-center font-bold max-sm:text-5xl"
             initial={{ opacity: 0, y: 100 }}
@@ -118,7 +121,7 @@ function Service() {
       <motion.div 
         className="px-20 my-5 w-full max-sm:px-1"
         initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        animate={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 1.2, ease: "easeOut" as const }}
       >
@@ -129,7 +132,7 @@ function Service() {
       <motion.div 
         className="w-full px-20 mb-10 max-sm:px-5"
         initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" as const }}
       >
@@ -204,7 +207,7 @@ function Service() {
       <motion.div 
         className="px-20 my-16 w-full max-sm:px-5"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
@@ -221,7 +224,7 @@ function Service() {
               key={index}
               className="text-center p-6 bg-white rounded-2xl shadow-lg border border-gray-100"
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" as const }}
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
@@ -238,7 +241,7 @@ function Service() {
       <motion.div 
         className="px-20 my-5 w-full max-sm:px-1"
         initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        animate={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 1.2, ease: "easeOut" as const }}
       >
@@ -262,7 +265,7 @@ function Service() {
         ].map((stat, index) => (
           <motion.div 
             key={index}
-            className="flex flex-col items-center justify-center z-50"
+            className="flex flex-col items-center justify-center z-10"
             custom={index}
             variants={counterVariants}
             transition={counterTransition(index)}
@@ -270,7 +273,7 @@ function Service() {
             <motion.h1 
               className="text-8xl text-white font-bold max-sm:text-5xl mb-2"
               initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
+              animate={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.3 + 0.5, type: "spring" }}
             >
@@ -287,7 +290,7 @@ function Service() {
       <motion.div 
         className="w-full px-20 my-16 max-sm:px-5"
         initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" as const }}
       >
@@ -295,7 +298,7 @@ function Service() {
           <motion.h2 
             className="text-4xl font-bold mb-6 max-sm:text-2xl"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
@@ -304,12 +307,13 @@ function Service() {
           <motion.p 
             className="text-xl mb-8 max-sm:text-base"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             Contactez-nous dès aujourd'hui pour une consultation gratuite et un devis personnalisé.
           </motion.p>
+          <Link to="/#Contacts" >
           <motion.button
             className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 max-sm:px-6 max-sm:py-3"
             whileHover={{ scale: 1.05 }}
@@ -317,6 +321,7 @@ function Service() {
           >
             Demander un Devis
           </motion.button>
+          </Link>
         </div>
       </motion.div>
     </section>
