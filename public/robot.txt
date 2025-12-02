@@ -9,4 +9,4 @@ Disallow: /private/
 Disallow: /node_modules/
 
 # Sitemap
-Sitemap: https://www.ksk-building.com/sitemap.xml
+Sitemap: https://www.kskbuilding.com/sitemap.xml
