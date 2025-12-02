@@ -4,19 +4,19 @@ import Separateur from '../Separateur';
 const Temoignage = () => {
   const temoignages = [
     {
-      name: "M. et Mme Dupont",
+      name: "M. et Mme Konan",
       project: "Construction maison individuelle",
       quote: "Un professionnalisme remarquable du début à la fin. Les délais ont été respectés à la lettre !",
       rating: "★★★★★"
     },
     {
-      name: "SARL TechSolutions",
+      name: "M. Famoni",
       project: "Rénovation bureaux",
       quote: "Excellente communication et grande réactivité. Nous recommandons vivement leurs services.",
       rating: "★★★★★"
     },
     {
-      name: "M. Laurent",
+      name: "M. Touré",
       project: "Aménagement paysager",
       quote: "Notre jardin est devenu un véritable havre de paix. Travail soigné et créatif.",
       rating: "★★★★☆"

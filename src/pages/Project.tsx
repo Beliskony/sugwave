@@ -125,7 +125,7 @@ function Project() {
               ease: "easeOut" as const 
             }}
           >
-            Decouvez Certains De Nos Projets
+            Decouvez Certains De Nos Projets récents
           </motion.h1>
         </div>
 
@@ -333,17 +333,6 @@ function Project() {
             ))}
           </div>
         </div>
-      </motion.div>
-
-      {/* Section CTA */}
-      <motion.div 
-        className="w-full px-20 my-16 max-sm:px-5"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut" as const }}
-      >
-
       </motion.div>
     </section>
   );

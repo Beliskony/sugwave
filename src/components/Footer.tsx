@@ -147,8 +147,8 @@ const Footer = () => {
           </motion.h2>
           <div className="flex flex-col items-center md:items-start gap-3">
             {[
-              { icon: Phone, href: "tel:+2250788557370", text: "07-88-55-73-70" },
-              { icon: Mail, href: "mailto:nguessanaxel21@gmail.com", text: "contact@ksk-building.com" }
+              { icon: Phone, href: "tel:+2250708052131", text: "07-08-05-21-31" },
+              { icon: Mail, href: "mailto:kangaseraphin@gmail.com", text: "contact@ksk-building.com" }
             ].map((contact, index) => (
               <motion.div
                 key={contact.text}
@@ -195,8 +195,7 @@ const Footer = () => {
           </motion.h2>
           <div className="flex flex-col items-center md:items-start gap-3">
             {[
-              { href: "https://maps.app.goo.gl/1BUDiFMkHiqH4jDu9", text: "Abidjan, Koumassi" },
-              { href: "https://maps.app.goo.gl/DnPLtnWqqUuEG9Kf8", text: "Rue H732" }
+              { href: "https://maps.app.goo.gl/XnTmr6knz2fMm2kA9?g_st=iwb", text: "Abidjan, Cocody Faya laurier" }
             ].map((address, index) => (
               <motion.div
                 key={address.text}
@@ -254,7 +253,7 @@ const Footer = () => {
           </motion.p>
           <div className="flex items-center gap-6">
             {[
-              { icon: Facebook, href: "#", color: "hover:text-blue-600" },
+              { icon: Facebook, href: "https://web.facebook.com/profile.php?id=61557712606152", color: "hover:text-blue-600" },
               { icon: Instagram, href: "#", color: "hover:text-pink-500" },
               { icon: Twitter, href: "#", color: "hover:text-sky-500" }
             ].map((social, index) => (

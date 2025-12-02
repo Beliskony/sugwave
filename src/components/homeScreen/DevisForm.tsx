@@ -149,6 +149,7 @@ const DevisForm: React.FC<DevisFormProps> = ({ isClicked, setIsClicked }) => {
                 <option value="Construction">Construction</option>
                 <option value="Rénovation">Rénovation</option>
                 <option value="Étude technique">Étude technique</option>
+                <option value="Étude technique">Piscine</option>
                 <option value="Autre">Autre</option>
               </select>
 

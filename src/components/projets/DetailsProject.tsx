@@ -87,7 +87,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
             <img
               src={project.coverImage}
               alt={project.title}
-              className="w-full h-full object-cover"
+              className="w-full h-[400px] object-cover"
             />
           ) : (
             <div className="bg-gray-600 w-full h-full flex items-center justify-center">
