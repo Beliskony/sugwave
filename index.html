@@ -1,19 +1,112 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr-CI">
   <head>
+    <!-- Encodage et meta viewport -->
     <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KSK-BUILDING</title>
+    
+    <!-- Titre optimisé -->
+    <title>KSK-BUILDING | Construction, Aménagement & Services Techniques en Côte d'Ivoire</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="KSK-BUILDING : Entreprise polyvalente en Côte d'Ivoire. Construction BTP, aménagement paysager, piscines, services informatiques et fournitures. Expert en projets résidentiels et commerciaux.">
+    
+    <!-- Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="KSK-BUILDING | Expertise Polyvalente en Construction">
+    <meta property="og:description" content="Entreprise multi-spécialités en Côte d'Ivoire : Construction, Aménagement, Services Techniques et Fournitures.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ksk-building.com">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:locale" content="fr_CI">
+    <meta property="og:site_name" content="KSK-BUILDING">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KSK-BUILDING | Votre Partenaire Polyvalent en Côte d'Ivoire">
+    <meta name="twitter:description" content="Expert en construction, aménagement, services techniques et fournitures. Une entreprise, six expertises.">
+    <meta name="twitter:image" content="/images/twitter-image.jpg">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.ksk-building.com">
+    
+    <!-- Preconnect pour les polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Polices Google - version optimisée pour performance -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" as="style">
+    
+    <!-- Ajouter ces balises dans <head> -->
+<meta name="keywords" content="construction Côte d'Ivoire, BTP Abidjan, aménagement paysager, piscine, services techniques, fournitures bâtiment">
+<meta name="geo.region" content="CI-AB">
+<meta name="geo.placename" content="Abidjan">
+<meta name="geo.position" content="5.359951;-4.008256">
+<meta name="ICBM" content="5.359951, -4.008256">
+
+    
+    <!-- Favicon (Vite gère automatiquement les assets du dossier public) -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    
+    <!-- Thème couleur pour PWA -->
+    <meta name="theme-color" content="#2b5797">
+    
+    <!-- Preload pour améliorer les performances (optionnel avec Vite) -->
+    <!-- <link rel="modulepreload" href="/src/main.tsx" as="script"> -->
+    
+    <!-- Schema.org JSON-LD (à placer ici ou dans votre composant React) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ConstructionBusiness",
+      "name": "KSK-BUILDING",
+      "description": "Entreprise polyvalente spécialisée en construction BTP, aménagement paysager, services techniques et fournitures en Côte d'Ivoire.",
+      "url": "https://www.ksk-building.com",
+      "logo": "/favicon/web-app-manifest-512x512.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CI",
+        "addressRegion": "Abidjan"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["French"]
+      },
+      "areaServed": "Côte d'Ivoire"
+    }
+    </script>
+    
   </head>
   <body>
+    <!-- Root pour React -->
     <div id="root"></div>
+    
+    <!-- Vite injectera automatiquement les scripts ici -->
+    
+    <!-- Noscript pour les navigateurs sans JS -->
+    <noscript>
+      <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+        <div>
+          <h1 style="font-family: 'Poppins', sans-serif; color: #2b5797; margin-bottom: 20px;">KSK-BUILDING</h1>
+          <p style="font-family: 'Inter', sans-serif; color: #333; line-height: 1.6;">
+            Pour profiter pleinement de notre site, veuillez activer JavaScript dans votre navigateur.<br>
+            Notre entreprise est spécialisée dans la construction, l'aménagement paysager, les services techniques et les fournitures en Côte d'Ivoire.
+          </p>
+          <p style="margin-top: 20px; font-size: 14px; color: #666;">
+            Contactez-nous pour vos projets de construction et d'aménagement.
+          </p>
+        </div>
+      </div>
+    </noscript>
+    
+    <!-- Vite gère automatiquement l'injection du script -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

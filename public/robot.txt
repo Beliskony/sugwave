@@ -1,0 +1,12 @@
+# robots.txt pour KSK-BUILDING
+User-agent: *
+Allow: /
+
+# Empêche l'accès aux zones privées
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://www.ksk-building.com/sitemap.xml
