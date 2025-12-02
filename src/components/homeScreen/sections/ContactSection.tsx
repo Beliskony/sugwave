@@ -153,6 +153,7 @@ function ContactSection() {
               width="100%" 
               height="400"
               loading="lazy"
+              title="Carte Google Maps montrant l'emplacement de KSK-BUILDING en Côte d'Ivoire"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
